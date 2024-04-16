@@ -1,0 +1,112 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0 0;
+
+    &__container {
+        @include container;
+    }
+
+    &__column {
+        flex: 1;
+        padding: 1rem 0;
+    }
+
+    &__column h3 {
+        font-size: 1.2rem;
+        margin: 0 0 1.5rem;
+        font-weight: 700;
+    }
+
+    &__column ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__column li {
+        margin-bottom: 1rem;
+    }
+
+    &__column a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &__newsletter {
+        margin-top: 20px;
+        display: flex;
+        position: relative;
+
+        flex-direction: column;
+    }
+
+    &__newsletter input {
+        padding: 10px;
+        border-radius: 1rem;
+        border: none;
+    }
+
+    &__newsletter button {
+        padding: 10px;
+        border-radius: 0 1rem 1rem 0;
+        background-color: #005b9e;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    &__social {
+        margin-top: 10px;
+        display: flex;
+    }
+
+    &__social i {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #fff;
+    }
+
+    &__bottom {
+        background-color: #005b9e;
+        padding: 1.5rem 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__legal {
+        display: flex;
+        flex-grow: 1;
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__legal a {
+        text-decoration: underline;
+    }
+
+    &__copyright p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        &__column {
+            flex-basis: 50%;
+        }
+
+        &__legal {
+            justify-content: center;
+            margin: 1rem 0;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__container {
+            flex-wrap: nowrap;
+        }
+    }
+}

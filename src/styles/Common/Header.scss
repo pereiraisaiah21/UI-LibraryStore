@@ -1,0 +1,91 @@
+.header {
+    color: #000000;
+    padding: 10px 0;
+
+    &__container {
+        @include container($align: center);
+    }
+
+    &__logo {
+        display: block;
+        text-decoration: unset;
+        color: #333;
+        font-size: 1.5rem;
+        flex-grow: .1;
+        border-right: 1px solid rgb(0, 0, 0);
+    }
+
+    &__pages {
+        display: flex;
+        gap: 20px;
+        flex-grow: .7;
+        padding-left: 1rem;
+    }
+
+    &__pages a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 8px;
+        flex-grow: .1;
+    }
+
+    &__searchInput {
+        border: 1px solid #c9c8c8;
+        padding: 5px;
+        width: 100%;
+        background-color: unset;
+        color: #000000;
+        border-radius: 8px;
+    }
+
+    &__searchIcon {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 3px;
+        right: 5px;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__cartIcon,
+    &__userIcon {
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        &__container {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &__search {
+            flex-basis: 100%;
+        }
+
+        &__logo {
+            margin: .5rem 0;
+        }
+
+        &__icons {
+            display: none;
+        }
+
+        &__pages {
+            display: none;
+        }
+
+        &__logo {
+            border-right: none;
+        }
+    }
+}
